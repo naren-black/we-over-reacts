@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t narenblue/react-test -f ./client/Dockerfile.dev
+  - docker build -t narenblue/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true narenblue/react-test npm test
